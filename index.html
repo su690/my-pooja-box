@@ -1,0 +1,1377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Pooja Box Clone</title>
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* Scrollbar customization for category slider */
+    .custom-scroll::-webkit-scrollbar {
+      height: 8px; /* Thicker scrollbar */
+    }
+    .custom-scroll::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 4px;
+    }
+    .custom-scroll::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Top Bar -->
+  <div class="bg-pink-500 text-white text-center py-2 text-sm font-semibold">
+    END OF SEASON SALE IS NOW LIVE
+  </div>
+
+  <!-- Header -->
+  <header class="bg-white shadow-md">
+    <div class="max-w-screen-xl mx-auto px-4 flex justify-between items-center py-4">
+      
+      <!-- Left Section (Logo) -->
+      <div class="flex items-center space-x-4">
+        <img src="logo.png" alt="Logo" class="h-16">
+      </div>
+      
+      <!-- Middle Section (Nav Links) -->
+      <div class="hidden md:flex space-x-6 text-gray-700">
+        <div class="relative group">
+          <a href="#" class="hover:text-pink-500">Shop ▾</a>
+          <!-- Dropdown Content -->
+          <div class="absolute left-0 hidden group-hover:block bg-white shadow-lg p-6 w-[800px] border z-50">
+            <div class="grid grid-cols-3 gap-6 text-sm text-gray-700">
+              <div>
+                <p class="font-bold">HOME DECOR</p>
+                <p>GIFT HAMPERS</p>
+                <p>INCENSE</p>
+                <p>SALT LAMPS</p>
+                <p>CLEARANCE SALE</p>
+                <p>SAGE</p>
+                <p>MARBLE DECOR</p>
+                <p>FENG SHUI</p>
+                <p>CRYSTAL RINGS</p>
+                <p>LAMPS & LANTERNS</p>
+                <p>CENTERPIECES</p>
+                <p>COFFEE TABLE BOOKS</p>
+                <p>TABLEWARE & SERVEWARE</p>
+              </div>
+              <div>
+                <p class="font-bold">HEALING CRYSTALS</p>
+                <p>CANDLES & DIYAS</p>
+                <p>FESTIVE DECOR</p>
+                <p>GOD IDOLS</p>
+                <p>URLI</p>
+                <p>TABLE LINEN</p>
+                <p>BRASS DECOR</p>
+                <p>SILVER DECOR</p>
+                <p>CRYSTAL PENDANTS</p>
+                <p>ROSE QUARTZ</p>
+                <p>AMETHYST</p>
+                <p>CRYSTAL SHOWPIECES</p>
+                <p>CRYSTAL TREES</p>
+              </div>
+              <div>
+                <p class="font-bold">POOJA ROOM DECOR</p>
+                <p>POOJA THALI SETS</p>
+                <p>EVIL EYE</p>
+                <p>POOJA ESSENTIALS</p>
+                <p>CUSHIONS</p>
+                <p>JAP MALAS</p>
+                <p>ROSE GOLD DECOR</p>
+                <p>CRYSTAL BRACELETS</p>
+                <p>VASTU & YANTRA</p>
+                <p>PYRITE</p>
+                <p>GANESH IDOLS</p>
+                <p>KRISHNA IDOLS</p>
+                <p>SHIV IDOLS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="hover:text-pink-500">Home Decor</a>
+        <a href="#" class="hover:text-pink-500">Festive Decor</a>
+        <a href="#" class="hover:text-pink-500">Corporate Gifting</a>
+      </div>
+      
+      <!-- Right Section (Icons) -->
+      <div class="flex space-x-4 items-center">
+        <a href="#" class="text-gray-700 hover:text-pink-500">👤 Account</a>
+        <a href="#" class="text-gray-700 hover:text-pink-500">🔍 Search</a>
+        <a href="#" class="text-gray-700 hover:text-pink-500 relative">
+          ❤️ Wishlist
+          <span class="absolute top-0 right-0 bg-pink-500 text-white text-xs rounded-full px-2"></span>
+        </a>
+        <a href="#" class="text-gray-700 hover:text-pink-500 relative">
+          🛒 Cart
+          <span class="absolute top-0 right-0 bg-pink-500 text-white text-xs rounded-full px-2"></span>
+        </a>
+      </div>
+      
+    </div>
+  </header>
+  
+
+  <!-- Hero/Video Section -->
+  <div class="relative w-full">
+    <video class="w-full h-auto" autoplay loop muted playsinline>
+      <source src="8c0ad6982d6a4ceda5f92d9b3c860a5a.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+<!-- Shop by Category (Carousel) -->
+<section class="bg-white py-6">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <h2 class="text-2xl font-bold mb-4 text-gray-800">Shop by Category</h2>
+    <!-- Horizontal Scroll with custom scrollbar -->
+    <div class="flex space-x-6 overflow-x-auto custom-scroll">
+      <!-- Category Card -->
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/DSC_5574_a4ca7ca8-4d85-4749-aef0-59fed43b9600_300x.jpg?v=1718779950"
+            alt="Rose Quartz" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">ROSE QUARTZ</p>
+      </div>
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/aura-cleansing_300x.png?v=1654682550"
+            alt="Urlis" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">URLIS</p>
+      </div>
+
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/tourmaline_300x.png?v=1734695225"
+            alt="Pyrite" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">PYRITE</p>
+      </div>
+
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/urlis_300x.png?v=1672914906"
+            alt="Tourmaline" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">TOURMALINE</p>
+      </div>
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/aura-cleansing_300x.png?v=1654682550"
+            alt="Urlis" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">URLIS</p>
+      </div>
+
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/aura-cleansing_300x.png?v=1654682550"
+            alt="Urlis" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">URLIS</p>
+      </div>
+
+      <!-- You can repeat or adjust the following cards as needed -->
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/tourmaline_300x.png?v=1734695225"
+            alt="Pyrite" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">PYRITE</p>
+      </div>
+      
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/urlis_300x.png?v=1672914906"
+            alt="Tourmaline" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">TOURMALINE</p>
+      </div>
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/aura-cleansing_300x.png?v=1654682550"
+            alt="Urlis" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">URLIS</p>
+      </div>
+      
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/amethyst_300x.png?v=1713260255"
+            alt="Aura Cleansing" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">AURA CLEANSING</p>
+      </div>
+      
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/malas_300x.png?v=1690292661"
+            alt="Amethyst" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">AMETHYST</p>
+      </div>
+      <div class="flex flex-col items-center min-w-[100px]">
+        <div class="w-28 h-28 rounded-full overflow-hidden border border-pink-200 mb-2">
+          <img 
+            src="https://www.mypoojabox.in/cdn/shop/files/aura-cleansing_300x.png?v=1654682550"
+            alt="Urlis" 
+            class="w-full h-full object-cover"
+          >
+        </div>
+        <p class="text-sm text-gray-700 font-medium">URLIS</p>
+      </div>
+      
+      <!-- Additional category cards as needed -->
+    </div>
+  </div>
+</section>
+<!--Check Section-->
+<!-- Gift Hampers Section -->
+<section class="bg-gray-100 py-6">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-semibold text-gray-800">Gift Hampers</h2>
+      <button class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 text-sm">
+        VIEW ALL
+      </button>
+    </div>
+
+    <!-- Outer wrapper: hides scrollbar, enables horizontal scroll on mobile -->
+    <div class="overflow-x-auto no-scrollbar">
+      <!-- 
+        On mobile (<768px): 
+          - flex row with flex-nowrap & gap-4
+          - each card min-w-[160px] (adjust as needed)
+        On md+ (≥768px): 
+          - 6-col grid, no scroll
+      -->
+      <div
+        class="
+          flex flex-nowrap gap-4
+          md:grid md:grid-cols-6 md:gap-4 md:w-full
+        "
+      >
+        <!-- Product Card 1 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">
+            ❤️
+          </button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim_58_b25abaa1-c5c2-4532-92e7-89412108c8be_225x.jpg?v=1732660503"
+            alt="Devotional Books Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Devotional Books Gift Box</h3>
+            <p class="text-pink-500 font-bold">
+              ₹2,499 <span class="text-gray-500 line-through">₹2,999</span>
+            </p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim-2024-12-04T132023.431_225x.jpg?v=1733394121"
+            alt="Exquisite Layer Diya Urli Stand Gift"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Exquisite Layer Diya Urli Stand Gift</h3>
+            <p class="text-pink-500 font-bold">₹2,199</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim_83_225x.jpg?v=1734087593"
+            alt="Astounding Lotus Diya Urli Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Astounding Lotus Diya Urli Gift Box</h3>
+            <p class="text-pink-500 font-bold">₹2,600</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/DSC03055copy_225x.jpg?v=1714630354"
+            alt="Astounding Lotus Diya Urli Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Astounding Lotus Diya Urli Gift Box</h3>
+            <p class="text-pink-500 font-bold">₹2,600</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/products/DSC_5773_225x.jpg?v=1736162564"
+            alt="Aesthetic Floral Urli With Diya"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Aesthetic Floral Urli With Diya</h3>
+            <p class="text-pink-500 font-bold">₹4,399</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/products/DSC_4193_ca856379-ea64-4452-bd1d-f66bb7318b95_225x.jpg?v=1593983992"
+            alt="Luminous Scented Candle Urli Gift"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Luminous Scented Candle Urli Gift</h3>
+            <p class="text-pink-500 font-bold">₹2,299</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--Check Section end-->
+<!-- Healing Crystals Section -->
+<section class="bg-gray-100 py-6">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-semibold text-gray-800">Healing Crystals</h2>
+      <button class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 text-sm">
+        VIEW ALL
+      </button>
+    </div>
+
+    <!-- Outer wrapper: hides scrollbar, enables horizontal scroll on mobile -->
+    <div class="overflow-x-auto no-scrollbar">
+      <!-- 
+        On mobile (<768px): 
+          - flex row with flex-nowrap & gap-4
+          - each card min-w-[160px] (adjust as needed)
+        On md+ (≥768px): 
+          - 6-col grid, no scroll
+      -->
+      <div
+        class="
+          flex flex-nowrap gap-4
+          md:grid md:grid-cols-6 md:gap-4 md:w-full
+        "
+      >
+        <!-- Product Card 1 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">
+            ❤️
+          </button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim_58_b25abaa1-c5c2-4532-92e7-89412108c8be_225x.jpg?v=1732660503"
+            alt="Devotional Books Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Devotional Books Gift Box</h3>
+            <p class="text-pink-500 font-bold">
+              ₹2,499 <span class="text-gray-500 line-through">₹2,999</span>
+            </p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim-2024-12-04T132023.431_225x.jpg?v=1733394121"
+            alt="Exquisite Layer Diya Urli Stand Gift"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Exquisite Layer Diya Urli Stand Gift</h3>
+            <p class="text-pink-500 font-bold">₹2,199</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim_83_225x.jpg?v=1734087593"
+            alt="Astounding Lotus Diya Urli Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Astounding Lotus Diya Urli Gift Box</h3>
+            <p class="text-pink-500 font-bold">₹2,600</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/DSC03055copy_225x.jpg?v=1714630354"
+            alt="Astounding Lotus Diya Urli Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Astounding Lotus Diya Urli Gift Box</h3>
+            <p class="text-pink-500 font-bold">₹2,600</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/products/DSC_5773_225x.jpg?v=1736162564"
+            alt="Aesthetic Floral Urli With Diya"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Aesthetic Floral Urli With Diya</h3>
+            <p class="text-pink-500 font-bold">₹4,399</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/products/DSC_4193_ca856379-ea64-4452-bd1d-f66bb7318b95_225x.jpg?v=1593983992"
+            alt="Luminous Scented Candle Urli Gift"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Luminous Scented Candle Urli Gift</h3>
+            <p class="text-pink-500 font-bold">₹2,299</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Clearance Sale Section -->
+<section class="bg-gray-100 py-6">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-semibold text-gray-800">Clearance Sale</h2>
+      <button class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 text-sm">
+        VIEW ALL
+      </button>
+    </div>
+
+    <!-- Outer wrapper: hides scrollbar, enables horizontal scroll on mobile -->
+    <div class="overflow-x-auto no-scrollbar">
+      <!-- 
+        On mobile (<768px): 
+          - flex row with flex-nowrap & gap-4
+          - each card min-w-[160px] (adjust as needed)
+        On md+ (≥768px): 
+          - 6-col grid, no scroll
+      -->
+      <div
+        class="
+          flex flex-nowrap gap-4
+          md:grid md:grid-cols-6 md:gap-4 md:w-full
+        "
+      >
+        <!-- Product Card 1 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">
+            ❤️
+          </button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim_58_b25abaa1-c5c2-4532-92e7-89412108c8be_225x.jpg?v=1732660503"
+            alt="Devotional Books Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Devotional Books Gift Box</h3>
+            <p class="text-pink-500 font-bold">
+              ₹2,499 <span class="text-gray-500 line-through">₹2,999</span>
+            </p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim-2024-12-04T132023.431_225x.jpg?v=1733394121"
+            alt="Exquisite Layer Diya Urli Stand Gift"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Exquisite Layer Diya Urli Stand Gift</h3>
+            <p class="text-pink-500 font-bold">₹2,199</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim_83_225x.jpg?v=1734087593"
+            alt="Astounding Lotus Diya Urli Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Astounding Lotus Diya Urli Gift Box</h3>
+            <p class="text-pink-500 font-bold">₹2,600</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/DSC03055copy_225x.jpg?v=1714630354"
+            alt="Astounding Lotus Diya Urli Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Astounding Lotus Diya Urli Gift Box</h3>
+            <p class="text-pink-500 font-bold">₹2,600</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/products/DSC_5773_225x.jpg?v=1736162564"
+            alt="Aesthetic Floral Urli With Diya"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Aesthetic Floral Urli With Diya</h3>
+            <p class="text-pink-500 font-bold">₹4,399</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/products/DSC_4193_ca856379-ea64-4452-bd1d-f66bb7318b95_225x.jpg?v=1593983992"
+            alt="Luminous Scented Candle Urli Gift"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Luminous Scented Candle Urli Gift</h3>
+            <p class="text-pink-500 font-bold">₹2,299</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Evil Eye Section -->
+<section class="bg-gray-100 py-6">
+  <div class="max-w-screen-xl mx-auto px-4">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-semibold text-gray-800">Evil Eye</h2>
+      <button class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 text-sm">
+        VIEW ALL
+      </button>
+    </div>
+
+    <!-- Outer wrapper: hides scrollbar, enables horizontal scroll on mobile -->
+    <div class="overflow-x-auto no-scrollbar">
+      <!-- 
+        On mobile (<768px): 
+          - flex row with flex-nowrap & gap-4
+          - each card min-w-[160px] (adjust as needed)
+        On md+ (≥768px): 
+          - 6-col grid, no scroll
+      -->
+      <div
+        class="
+          flex flex-nowrap gap-4
+          md:grid md:grid-cols-6 md:gap-4 md:w-full
+        "
+      >
+        <!-- Product Card 1 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">
+            ❤️
+          </button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim_58_b25abaa1-c5c2-4532-92e7-89412108c8be_225x.jpg?v=1732660503"
+            alt="Devotional Books Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Devotional Books Gift Box</h3>
+            <p class="text-pink-500 font-bold">
+              ₹2,499 <span class="text-gray-500 line-through">₹2,999</span>
+            </p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 2 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim-2024-12-04T132023.431_225x.jpg?v=1733394121"
+            alt="Exquisite Layer Diya Urli Stand Gift"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Exquisite Layer Diya Urli Stand Gift</h3>
+            <p class="text-pink-500 font-bold">₹2,199</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 3 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/imgpsh_fullsize_anim_83_225x.jpg?v=1734087593"
+            alt="Astounding Lotus Diya Urli Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Astounding Lotus Diya Urli Gift Box</h3>
+            <p class="text-pink-500 font-bold">₹2,600</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 4 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/files/DSC03055copy_225x.jpg?v=1714630354"
+            alt="Astounding Lotus Diya Urli Gift Box"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Astounding Lotus Diya Urli Gift Box</h3>
+            <p class="text-pink-500 font-bold">₹2,600</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 5 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/products/DSC_5773_225x.jpg?v=1736162564"
+            alt="Aesthetic Floral Urli With Diya"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Aesthetic Floral Urli With Diya</h3>
+            <p class="text-pink-500 font-bold">₹4,399</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+        <!-- Product Card 6 -->
+        <div class="relative bg-white shadow-md flex flex-col min-w-[160px] md:min-w-0">
+          <button class="absolute top-2 left-2 bg-white p-1 rounded-full shadow-md">❤️</button>
+          <span class="absolute top-2 right-2 bg-[#D0021B] text-white text-xs px-2 py-1 rounded">
+            17% OFF
+          </span>
+          <img
+            src="https://www.mypoojabox.in/cdn/shop/products/DSC_4193_ca856379-ea64-4452-bd1d-f66bb7318b95_225x.jpg?v=1593983992"
+            alt="Luminous Scented Candle Urli Gift"
+            class="w-full h-56 object-cover"
+          />
+          <div class="p-3 flex-1 flex flex-col">
+            <h3 class="text-base font-semibold mb-1">Luminous Scented Candle Urli Gift</h3>
+            <p class="text-pink-500 font-bold">₹2,299</p>
+          </div>
+          <button class="bg-[#D0021B] text-white py-2 w-full hover:bg-red-700 rounded-none">
+            ADD TO CART
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Customer Reviews & About Section -->
+<style>
+  /* Hide the default scrollbar */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;     /* Firefox */
+  }
+</style>
+</head>
+<body class="bg-gray-100">
+
+<!-- Reviews Section -->
+<section class="max-w-screen-xl mx-auto px-4 py-8">
+<!-- Heading & Write a Review Button -->
+<div class="flex justify-between items-center mb-6">
+  <h2 class="text-2xl font-semibold text-gray-800">Customer Reviews</h2>
+  <button class="bg-pink-500 hover:bg-pink-600 text-white px-4 py-2 text-sm">
+    WRITE A REVIEW
+  </button>
+</div>
+
+<!-- Horizontal Scroll Container -->
+<div class="relative overflow-x-auto no-scrollbar" id="reviewContainer">
+  <!-- Slider: each card is flex-shrink-0 so they line up horizontally -->
+  <div class="flex space-x-4 w-max" id="reviewSlider">
+    
+    <!-- Review Card 1 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjWbmyOXOS5Y7DFMaMwpJawLdQ29pdzSjfRL9kdwxrm3D0zxLWH3aw=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">Dr. Manjula</h3>
+          <p class="text-xs text-gray-500">0 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★★</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Received my product on time. Good packaging and quality. Happy with my purchase!
+      </p>
+    </div>
+
+    <!-- Review Card 2 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">HM</h3>
+          <p class="text-xs text-gray-500">1 day ago</p>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Quality is good, but I wish there were more color options. Overall, quite satisfied.
+      </p>
+    </div>
+
+    <!-- Review Card 3 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjWbmyOXOS5Y7DFMaMwpJawLdQ29pdzSjfRL9kdwxrm3D0zxLWH3aw=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">shivangi sharma</h3>
+          <p class="text-xs text-gray-500">2 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★★</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Beautiful packaging. The product arrived in perfect condition. Loved it!
+      </p>
+    </div>
+
+    <!-- Review Card 4 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">santosh jaggu</h3>
+          <p class="text-xs text-gray-500">3 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Timely delivery and decent quality. Overall, a good experience.
+      </p>
+    </div>
+
+    <!-- Review Card 5 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">prasan pawan</h3>
+          <p class="text-xs text-gray-500">5 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★★</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        I got my package on time. The product was just as described. Thank you!
+      </p>
+    </div>
+
+    <!-- Add more review cards as needed -->
+     <!-- Review Card 2 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">HM</h3>
+          <p class="text-xs text-gray-500">1 day ago</p>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Quality is good, but I wish there were more color options. Overall, quite satisfied.
+      </p>
+    </div>
+
+    <!-- Review Card 3 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjWbmyOXOS5Y7DFMaMwpJawLdQ29pdzSjfRL9kdwxrm3D0zxLWH3aw=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">shivangi sharma</h3>
+          <p class="text-xs text-gray-500">2 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★★</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Beautiful packaging. The product arrived in perfect condition. Loved it!
+      </p>
+    </div>
+
+    <!-- Review Card 4 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">santosh jaggu</h3>
+          <p class="text-xs text-gray-500">3 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Timely delivery and decent quality. Overall, a good experience.
+      </p>
+    </div>
+
+    <!-- Review Card 5 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">prasan pawan</h3>
+          <p class="text-xs text-gray-500">5 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★★</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        I got my package on time. The product was just as described. Thank you!
+      </p>
+    </div>
+
+    <!-- Review Card 2 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">HM</h3>
+          <p class="text-xs text-gray-500">1 day ago</p>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Quality is good, but I wish there were more color options. Overall, quite satisfied.
+      </p>
+    </div>
+
+    <!-- Review Card 3 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjWbmyOXOS5Y7DFMaMwpJawLdQ29pdzSjfRL9kdwxrm3D0zxLWH3aw=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">shivangi sharma</h3>
+          <p class="text-xs text-gray-500">2 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★★</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Beautiful packaging. The product arrived in perfect condition. Loved it!
+      </p>
+    </div>
+
+    <!-- Review Card 4 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">santosh jaggu</h3>
+          <p class="text-xs text-gray-500">3 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★☆</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        Timely delivery and decent quality. Overall, a good experience.
+      </p>
+    </div>
+
+    <!-- Review Card 5 -->
+    <div class="bg-white shadow p-4 rounded-md flex-shrink-0 w-64">
+      <div class="flex items-center">
+        <img
+          src="https://lh3.googleusercontent.com/a-/ALV-UjU1ah65CiU2a_TMT_FHSR6TU5pwJLg_0yRlLMbo4ID38aZrUSCh=w75-h75-p-rp-mo-br100"
+          alt="User Photo"
+          class="w-10 h-10 rounded-full object-cover"
+        />
+        <div class="ml-3">
+          <h3 class="text-sm font-semibold">prasan pawan</h3>
+          <p class="text-xs text-gray-500">5 days ago</p>
+          <div class="text-yellow-400 text-sm">★★★★★</div>
+        </div>
+      </div>
+      <p class="mt-2 text-sm text-gray-700">
+        I got my package on time. The product was just as described. Thank you!
+      </p>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<script>
+// Automatic Horizontal Scroll
+const reviewContainer = document.getElementById('reviewContainer');
+const reviewSlider = document.getElementById('reviewSlider');
+
+// Speed & Interval
+const scrollStep = 1;       // pixels per interval
+const scrollIntervalTime = 20;  // ms
+
+function autoScrollReviews() {
+  reviewContainer.scrollLeft += scrollStep;
+  // If we've reached the end, reset to 0 for a loop
+  if (reviewContainer.scrollLeft >= (reviewSlider.scrollWidth - reviewContainer.clientWidth)) {
+    reviewContainer.scrollLeft = 0;
+  }
+}
+
+let scrollInterval = setInterval(autoScrollReviews, scrollIntervalTime);
+</script>
+  <!-- About Section with "Read More" -->
+  <section class="bg-200 py-8 mt-8 text-center">
+    <div class="max-w-screen-xl mx-auto px-6">
+      <h2 class="text-2xl font-bold text-gray-800">
+        My Pooja Box - A One-stop Festive Decor &amp; Gifting Shop
+      </h2>
+      <p class="text-gray-600 mt-2">
+        Being a one-stop pooja samagri online store in India, My Pooja Box bridges
+        the gap between devotees and devotion. We have sorted all your devotional
+        needs by putting forth a wide assortment of products by making it easier
+        for you to buy pooja items on...
+        <span id="extraContent" class="hidden">
+          <!-- Additional text hidden by default -->
+          <br/><br/>
+          ...our website. From home décor to festive essentials, corporate gifting, 
+          and spiritual accessories, we ensure quality and authenticity in every product.
+        </span>
+      </p>
+      <button
+        id="readMoreLink"
+        class="text-pink-500 font-semibold mt-2 hover:text-pink-700"
+      >
+        Read More
+      </button>
+    </div>
+  </section>
+</section>
+
+<script>
+  // "Read More" Toggle
+  const readMoreBtn = document.getElementById('readMoreLink');
+  const extraContent = document.getElementById('extraContent');
+  let isExpanded = false;
+
+  readMoreBtn.addEventListener('click', () => {
+    isExpanded = !isExpanded;
+    if (isExpanded) {
+      extraContent.classList.remove('hidden');
+      readMoreBtn.textContent = 'Read Less';
+    } else {
+      extraContent.classList.add('hidden');
+      readMoreBtn.textContent = 'Read More';
+    }
+  });
+</script>
+
+<body class="bg-gray-100">
+  <!-- Floating Chat Button & Chat Panel -->
+  <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end">
+    <!-- Chat Button (only your icon, no background) -->
+    <button id="chatToggle" class="focus:outline-none">
+      <img src="chat_icon.png" alt="Chat Icon" class="w-420 h-120 object-contain">
+    </button>
+
+    <!-- Chat Panel (remains the same) -->
+    <div id="chatPanel" class="hidden w-80 bg-white shadow-lg border border-gray-200 rounded-md mt-2">
+      <!-- Panel Header -->
+      <div class="bg-pink-500 text-white p-4 flex justify-between items-center rounded-t-md">
+        <h2 class="text-lg font-semibold">Namastey!</h2>
+        <button id="closeChat" class="text-white hover:text-gray-200 focus:outline-none">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <!-- Panel Body -->
+      <div class="p-4 text-gray-800">
+        <p class="text-sm mb-3">
+          We're here to help you! Feel free to ask any questions or drop us an email.
+        </p>
+        <div class="flex items-center mb-3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp" class="w-6 h-6 mr-2">
+          <a href="https://wa.me/1234567890" target="_blank"
+            class="text-sm text-pink-500 hover:underline">
+            WhatsApp Us
+          </a>
+        </div>
+        <div class="flex items-center mb-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mr-2 text-gray-500"
+            fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M3 7l1.664 1.11a3 3 0 002.165.39l1.808-.45a2 2 0 011.195.03l2.127.85a2 2 0 001.195-.03l1.808-.45a3 3 0 002.165-.39L21 7m0 0v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7m18 0l-9 6-9-6" />
+          </svg>
+          <button class="text-sm text-pink-500 hover:underline"
+            onclick="alert('Redirect user to Order Status page...');">
+            View Order Status
+          </button>
+        </div>
+        <div class="mb-3">
+          <label for="chatInput" class="text-sm font-semibold block mb-1">
+            Type your query
+          </label>
+          <textarea id="chatInput" class="w-full border border-gray-300 rounded p-2 text-sm"
+            rows="3" placeholder="e.g. Where is my order?"></textarea>
+        </div>
+        <button class="bg-pink-500 hover:bg-pink-600 text-white py-2 px-4 text-sm rounded w-full"
+          onclick="sendMessage()">
+          Send
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const chatToggle = document.getElementById('chatToggle');
+    const chatPanel = document.getElementById('chatPanel');
+    const closeChat = document.getElementById('closeChat');
+
+    chatToggle.addEventListener('click', () => {
+      chatPanel.classList.toggle('hidden');
+    });
+
+    closeChat.addEventListener('click', () => {
+      chatPanel.classList.add('hidden');
+    });
+
+    function sendMessage() {
+      const userMsg = document.getElementById('chatInput').value.trim();
+      if (userMsg) {
+        alert('Message sent: ' + userMsg);
+        document.getElementById('chatInput').value = '';
+      } else {
+        alert('Please enter a message before sending.');
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+  <!-- Footer -->
+  <footer class="bg-pink-300 text-white py-8 mt-8">
+    <div class="max-w-screen-xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- My Pooja Box Section -->
+      <div>
+        <h2 class="text-lg font-bold">My POOJA BOX</h2>
+        <p class="text-sm">THE ART of GIFTING</p>
+        <div class="flex space-x-4 mt-2">
+          <button class="bg-white text-pink-500 px-4 py-2 rounded">Facebook</button>
+          <button class="bg-white text-pink-500 px-4 py-2 rounded">Instagram</button>
+        </div>
+      </div>
+      <!-- Information Section -->
+      <div>
+        <h2 class="text-lg font-bold">INFORMATION</h2>
+        <ul class="text-sm space-y-1">
+          <li>Track your Order</li>
+          <li>Returns and Refunds</li>
+          <li>Holiday List</li>
+          <li>Terms & Conditions</li>
+          <li>Privacy Policy</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+      <!-- Customer Care Section -->
+      <div>
+        <h2 class="text-lg font-bold">CUSTOMER CARE</h2>
+        <p class="text-sm">Phone: +91 8010288882 | +91 8010188881</p>
+        <p class="text-sm">Email: orders@mypoojabox.com</p>
+        <p class="text-sm">Address: My Pooja Box, Jagat Complex, 100 Ft Rd, Ghitorni, New Delhi 110030</p>
+      </div>
+    </div>
+
+    <!-- Additional Footer Row -->
+    <div class="mt-6 pt-6 px-6 flex flex-col md:flex-row justify-between items-center">
+      <!-- Download Buttons -->
+      <div class="flex space-x-4">
+        <img src="google_play_btn.png" alt="Google Play" class="h-10">
+        <img src="ios_btn.png" alt="App Store" class="h-10">
+      </div>
+      <!-- Centered Text -->
+      <p class="text-sm font-semibold">MOBIKASA VENTURES LLP</p>
+      <!-- Country Selector -->
+      <div class="flex items-center space-x-2">
+        <p class="text-sm">© 2025, All Rights Reserved.</p>
+        <select class="bg-white text-black text-sm px-2 py-1 rounded">
+          <option>India</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
